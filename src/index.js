@@ -39,14 +39,13 @@ function markupOneCountry(countryData) {
     const { flags, capital, population, name, languages } = countryData;
     const language = Object.values(languages).join(', ');
     const { } = languages;
-    const cardsMarkUp = countryData.map(({ flags, capital, population, name, languages })=>`<div style="display: flex; gap: 10px; margin-left: 20px; align-items: center"><img src='${flags.svg}' width='150px'/img>
+
+    elem.insertAdjacentHTML(
+        'afterbegin', `<div style="display: flex; gap: 10px; margin-left: 20px; align-items: center"><img src='${flags.svg}' width='150px'/img>
             <span style="font-size: 30px; font-weight: 700">${name.official}</span></div>
             <ul style="list-style: none; font-size: 18px; line-height: 2"><li><span style="font-weight: 700">Capital: </span>${capital}</li>
             <li><span style="font-weight: 700">Population: </span>${population}</li>
-            <li><span style="font-weight: 700">Language: </span>${language}</li></ul>`)
-
-    elem.insertAdjacentHTML(
-        'afterbegin', cardsMarkUp
+            <li><span style="font-weight: 700">Language: </span>${language}</li></ul>`
     )
    
 }
