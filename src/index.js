@@ -55,10 +55,3 @@ function markupCountries(countryData) {
         <span style="font-size: 18px; font-weight: 500">${name.official}</span></div>`).join('');
     elemList.insertAdjacentHTML('afterbegin', cardsMarkUp)
 }
-// function markupCountries(countryData) {
-//     countryData.map(country => {
-//         const { flags, name } = country;
-//         elemList.insertAdjacentHTML('afterbegin', `<div style="display: flex; gap: 10px; align-items: center; line-height: 2">
-//         <img src="${flags.svg}" width="40px">
-//         <span style="font-size: 18px; font-weight: 500">${name.official}</span></div>`)}).join('');
-// }
